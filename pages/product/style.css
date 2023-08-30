@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+header>iframe {
+  height: 120px;
+}
+
+footer>iframe {
+  position: absolute;
+}
+
+
+
+
+
+
+
+
+@media (max-width:425px) {
+  header>iframe {
+    height: 220px;
+  }
+
+}

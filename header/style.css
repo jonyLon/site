@@ -1,0 +1,129 @@
+@font-face {
+  font-family: 'RammettoOne-Regular';
+  src: url('../fonts/RammettoOne-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'lato-regular-webfont';
+  src: url('../fonts/lato-regular-webfont.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  font-family: 'RammettoOne-Regular';
+  color: #cb3362;
+  font-size: 25px;
+  margin-right: 15%;
+}
+
+.top-part {
+  position: relative;
+  left: 80px;
+  top: 23px
+}
+
+.logo>section>span {
+  color: #c8c10d;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 130px;
+  background-color: #efedee;
+}
+
+nav {
+  width: 60%;
+  font-size: large;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+li {
+  margin: 40px 10px;
+  list-style-type: none;
+  text-transform: uppercase;
+  font-family: 'lato-regular-webfont';
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+li>a:nth-child(2) {
+  display: none;
+}
+
+a:hover {
+  color: #c8c10d;
+}
+
+a:active {
+  color: #cb3362;
+}
+
+a {
+  padding: 5px;
+  text-decoration: none;
+  color: #7a6666;
+}
+
+
+@media (max-width:725px) {
+  header {
+    height: 140px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo {
+    position: absolute;
+    top: -20px;
+    margin: 0;
+  }
+
+  nav {
+    margin-top: 40px;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  li {
+    margin: 10px;
+  }
+}
+
+@media (max-width:425px) {
+  header {
+    height: 220px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo {
+    position: absolute;
+    top: -20px;
+    margin: 0;
+  }
+
+  nav {
+    margin-top: 50px;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  li {
+    margin: 10px;
+  }
+}

@@ -1,0 +1,267 @@
+@font-face {
+  font-family: 'RammettoOne-Regular';
+  src: url('../../fonts/RammettoOne-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'lato-regular-webfont';
+  src: url('../../fonts/lato-regular-webfont.ttf');
+}
+
+@font-face {
+  font-family: 'roboto-regular-webfont';
+  src: url('../../fonts/roboto-regular-webfont.ttf');
+}
+
+@font-face {
+  font-family: 'lato-bold-webfont';
+  src: url('../../fonts/lato-bold-webfont.ttf');
+}
+
+@font-face {
+  font-family: 'magra-bold-webfont';
+  src: url('../../fonts/magra-bold-webfont.ttf');
+}
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo {
+  font-family: 'RammettoOne-Regular';
+  color: #cb3362;
+  font-size: 25px;
+  margin-right: 15%;
+}
+
+.top-part {
+  position: relative;
+  left: 80px;
+  top: 23px
+}
+
+.logo>section>span {
+  color: #c8c10d;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 120px;
+  background-color: #efedee;
+}
+
+nav {
+  width: 60%;
+  font-size: large;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav li {
+  margin: 45px 10px;
+  list-style-type: none;
+  text-transform: uppercase;
+  font-family: 'lato-regular-webfont';
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+nav li>a:nth-child(2) {
+  display: none;
+}
+
+nav a:hover {
+  color: #c8c10d;
+}
+
+
+nav a {
+  padding: 5px;
+  text-decoration: none;
+  color: #7a6666;
+}
+
+nav>li:nth-child(4)>a:first-child {
+  color: #cb3362;
+}
+
+
+
+main section.title {
+  font-family: 'lato-regular-webfont';
+  width: 100%;
+  height: 100px;
+  background-color: #c8c10d;
+  color: white;
+  text-transform: uppercase;
+  font-size: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: white;
+  color: #7a6666;
+  display: grid;
+  width: 60%;
+  height: max-content;
+  margin: 50px auto;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr 50px;
+  grid-template-areas:
+    'first aside'
+    'second aside'
+    'button .';
+}
+
+.container .first {
+  grid-area: first;
+}
+
+.container .second {
+  grid-area: second;
+}
+
+
+.container .button {
+  grid-area: button;
+  display: flex;
+  align-items: center;
+}
+
+.container .button a {
+  margin: auto;
+}
+
+.container .button a:hover {
+  border: none;
+  background-color: #cb3362;
+  color: white;
+}
+
+section.container article {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-around;
+}
+
+section.container article div.text {
+  margin: 0 40px;
+}
+
+.container aside {
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #efedee;
+  padding: 30px;
+  text-align: center;
+}
+
+.container h3 {
+  font-weight: normal;
+  font-family: 'lato-regular-webfont';
+  font-size: 25px;
+  color: #cb3362;
+}
+
+.container small {
+  font-family: 'roboto-regular-webfont';
+  font-size: smaller;
+}
+
+.container p {
+  font-family: 'roboto-regular-webfont';
+  line-height: 30px;
+  margin: 40px 0;
+}
+
+.container a {
+  font-family: 'lato-bold-webfont';
+  text-decoration: none;
+  padding: 10px 25px;
+  border: 1px solid #7a6666;
+  color: #7a6666;
+}
+
+.container a:hover {
+  border: 1px solid #efedee;
+  background-color: #c8c10d;
+  color: white;
+}
+
+.container aside h2 {
+  font-family: 'magra-bold-webfont';
+  color: #cb3362;
+  margin-bottom: 20px;
+}
+
+.container aside img {
+  margin-bottom: 20px;
+}
+
+@media (max-width:725px) {
+  header {
+    height: 140px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo {
+    position: absolute;
+    top: -20px;
+    margin: 0;
+  }
+
+  nav {
+    margin-top: 40px;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav li {
+    margin: 10px;
+  }
+}
+
+@media (max-width:425px) {
+  header {
+    height: 220px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo {
+    position: absolute;
+    top: -20px;
+    margin: 0;
+  }
+
+  nav {
+    margin-top: 50px;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 10px;
+  }
+}
