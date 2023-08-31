@@ -111,9 +111,11 @@ main figure img {
 }
 
 
-article {
+article.container {
   width: 70%;
   margin: 40px auto;
+  display: flex;
+  flex-direction: row;
 }
 
 article h3 {
@@ -137,18 +139,20 @@ article a:hover {
 }
 
 article aside h3 {
-  line-height: 50px;
+  line-height: 40px;
 }
 
-aside {
-  float: left;
+aside.side-content {
   background-color: #efedee;
-  width: 200px;
-  margin: auto 40px;
-  padding: 50px;
+  min-width: 100px;
+  max-width: 200px;
+  margin-top: 0;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: auto;
+  padding: 40px;
   text-align: center;
-  line-height: 50px;
-  margin-bottom: 200px;
+  line-height: 40px;
 }
 
 footer>iframe {
@@ -179,18 +183,47 @@ footer>iframe {
   li {
     margin: 10px;
   }
+
+  article.container {
+    width: 90%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  aside.side-content {
+    background-color: #efedee;
+    min-width: 90%;
+    max-width: 90%;
+    margin: 0;
+    padding: 20px;
+    text-align: start;
+    line-height: 30px;
+  }
+
+  aside.side-content br {
+    display: none;
+  }
+
+  aside.side-content h3 br {
+    display: none;
+  }
+
+  aside.side-content h3 {
+    line-height: normal;
+  }
 }
 
 @media (max-width:425px) {
   header {
-    height: 220px;
+    height: 250px;
     justify-content: center;
     align-items: center;
   }
 
   .logo {
     position: absolute;
-    top: -20px;
+    top: -30px;
     margin: 0;
   }
 
@@ -201,7 +234,7 @@ footer>iframe {
     align-items: center;
   }
 
-  li {
+  nav li {
     margin: 10px;
   }
 }

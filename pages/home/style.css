@@ -226,7 +226,7 @@ section.menu ul li a img {
     justify-content: center;
   }
 
-  li {
+  nav li {
     margin: 10px;
   }
 }
@@ -242,7 +242,7 @@ section.menu ul li a img {
   }
 
   section.menu {
-    height: 450px;
+    height: 500px;
     display: flex;
     justify-content: center;
   }
@@ -254,14 +254,14 @@ section.menu ul li a img {
 
 @media (max-width:425px) {
   header {
-    height: 220px;
+    height: 250px;
     justify-content: center;
     align-items: center;
   }
 
   .logo {
     position: absolute;
-    top: -20px;
+    top: -30px;
     margin: 0;
   }
 
@@ -272,7 +272,7 @@ section.menu ul li a img {
     align-items: center;
   }
 
-  li {
+  nav li {
     margin: 10px;
   }
 

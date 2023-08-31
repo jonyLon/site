@@ -111,14 +111,18 @@ main section.title {
   justify-content: center;
 }
 
+.wraper {
+  display: flex;
+  justify-content: center;
+}
+
 .container {
   background-color: white;
   color: #7a6666;
   display: grid;
-  width: 60%;
   height: max-content;
   margin: 50px auto;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 60vw 20vw;
   grid-template-rows: 1fr 1fr 50px;
   grid-template-areas:
     'first aside'
@@ -171,6 +175,8 @@ section.container article div.text {
   background-color: #efedee;
   padding: 30px;
   text-align: center;
+  min-width: 220px;
+  max-height: 800px;
 }
 
 .container h3 {
@@ -215,7 +221,69 @@ section.container article div.text {
   margin-bottom: 20px;
 }
 
+@media (max-width:975px) {
+  .container {
+    background-color: white;
+    color: #7a6666;
+    display: grid;
+    margin: 50px auto;
+    grid-template-columns: 75vw;
+    grid-template-rows: 1fr 1fr 1fr 50px;
+    grid-template-areas:
+      'aside'
+      'second'
+      'first'
+      'button';
+  }
+
+  .container aside {
+    display: block;
+    background-color: #efedee;
+    padding: 30px;
+    text-align: start;
+    margin-bottom: 30px;
+
+  }
+
+  .container aside img {
+    float: left;
+    margin-right: 30px;
+  }
+
+  .container aside a {
+    margin: auto;
+  }
+}
+
 @media (max-width:725px) {
+  .container {
+    display: grid;
+    margin: 20px auto;
+    grid-template-columns: 75vw;
+    grid-template-rows: 60vh 1fr 1fr 70px;
+  }
+
+  .container aside {
+    display: flex;
+    flex-direction: column;
+    background-color: #efedee;
+    padding: 20px;
+    text-align: start;
+    margin-bottom: 30px;
+  }
+
+  .container article {
+    margin-bottom: 30px;
+  }
+
+  .container aside img {
+    margin-right: 10px;
+  }
+
+  .container aside a {
+    margin: 0 auto;
+  }
+
   header {
     height: 140px;
     justify-content: center;
@@ -241,16 +309,43 @@ section.container article div.text {
   }
 }
 
+@media (max-width:555px) {
+  .container article img {
+    display: none;
+  }
+
+  .container {
+    display: grid;
+    margin: 50px auto;
+    grid-template-columns: 75vw;
+    grid-template-rows: 60vh 1fr 1fr 70px;
+    grid-template-areas:
+      'aside'
+      'second'
+      'first'
+      'button';
+  }
+
+  .container article {
+    margin-bottom: 20px;
+  }
+}
+
 @media (max-width:425px) {
+  .container {
+    grid-template-columns: 80vw;
+    grid-template-rows: 65vh 1fr 1fr 70px;
+  }
+
   header {
-    height: 220px;
+    height: 250px;
     justify-content: center;
     align-items: center;
   }
 
   .logo {
     position: absolute;
-    top: -20px;
+    top: -30px;
     margin: 0;
   }
 
